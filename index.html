@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kleines 1x1 Üben</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Start Box -->
+        <div class="start-box active">
+            <h1>Starten Sie das kleine 1x1!</h1>
+            <div class="settings">
+                <label for="table-select">Tabelle wählen:</label>
+                <select id="table-select">
+                    <option value="all">Alle</option>
+                    <option value="2">2er-Tabelle</option>
+                    <option value="3">3er-Tabelle</option>
+                    <option value="4">4er-Tabelle</option>
+                    <option value="5">5er-Tabelle</option>
+                    <option value="6">6er-Tabelle</option>
+                    <option value="7">7er-Tabelle</option>
+                    <option value="8">8er-Tabelle</option>
+                    <option value="9">9er-Tabelle</option>
+                    <option value="10">10er-Tabelle</option>
+                </select>
+            </div>
+            <div class="settings">
+                <label for="question-count">Anzahl der Aufgaben:</label>
+                <select id="question-count">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <button onclick="startQuiz()">Start</button>
+        </div>
+
+        <!-- Quiz Box -->
+        <div class="quiz-box">
+            <h1>Das kleine 1x1 Üben</h1>
+            <p id="question">Lade Frage...</p>
+            <input type="number" id="answer" placeholder="Deine Antwort">
+            <button onclick="checkAnswer()">Überprüfen</button>
+            <div class="timer" id="timer">Zeit: 10s</div>
+            <div class="score" id="score">Punkte: 0</div>
+            <div class="result" id="result"></div>
+        </div>
+
+        <!-- Summary Box -->
+        <div class="summary" id="summary"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
